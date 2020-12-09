@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="casual"
+            android:text="Welcome to\nHealth Buddy"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="36sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="casual"
+            android:text="Please login to continue..."
+            android:textColor="@color/colorPrimary"
+            android:textSize="25dp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="Username"
+            android:layout_marginTop="10dp"
+            android:textColorHint="#716E6E"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/usernameText"
+                android:textColor="@color/colorPrimary"
+                android:drawablePadding="3dp"
+                android:inputType="text"
+                android:drawableStart="@drawable/ic_baseline_people_24"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="Password"
+            android:layout_marginTop="8dp"
+            app:boxStrokeColor="@color/colorPrimary"
+            android:textColorHint="#716E6E"
+            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/passwordText"
+                android:inputType="textPassword"
+                android:drawablePadding="3dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_weight="2"
+                android:onClick="onClickRegister"
+                android:textColor="@color/white"
+                android:text="Register"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_pass"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:textColor="@color/white"
+                android:text="Login"
+                android:textSize="16sp"
+                android:onClick="onClickLogin"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/button_login"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
